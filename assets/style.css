@@ -1,0 +1,54 @@
+/* Tailwind-like minimal utility-inspired custom CSS (no build step) */
+:root{
+  --green:#16a34a;--blue:#2563eb;--red:#dc2626;--yellow:#eab308;
+  --bg:#0b1220;--surface:#0f172a;--muted:#94a3b8;--ring:#334155;
+}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;font-family:system-ui,Segoe UI,Roboto,Arial,"Noto Naskh Arabic","Noto Kufi Arabic",sans-serif;background:#0b1220;color:#e5e7eb}
+a{color:inherit}
+.app-header{position:sticky;top:0;background:linear-gradient(90deg,var(--surface),#111827);padding:12px 16px;border-bottom:1px solid var(--ring);display:flex;align-items:center;justify-content:space-between;z-index:10}
+h1{font-size:20px;margin:0}
+#view-root{padding:16px 12px 80px}
+.btn{border:1px solid var(--ring);background:#111827;color:#e5e7eb;border-radius:12px;padding:8px 12px;cursor:pointer}
+.btn.ghost{background:transparent}
+.btn.primary{background:#2563eb;border-color:#1d4ed8}
+.input, .select, textarea{width:100%;padding:10px 12px;border:1px solid var(--ring);border-radius:12px;background:#0b1220;color:#e5e7eb}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.row3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.card{background:var(--surface);border:1px solid var(--ring);border-radius:16px;padding:12px}
+.subject{display:flex;align-items:center;gap:12px;border-radius:18px;padding:14px;border:1px solid var(--ring)}
+.subject .left{font-size:26px}
+.subject .mid{flex:1}
+.small{font-size:12px;color:var(--muted)}
+.pill{padding:2px 8px;border-radius:999px;border:1px solid var(--ring);font-size:12px}
+.fab{position:fixed;right:18px;bottom:18px;width:56px;height:56px;border-radius:50%;font-size:28px;line-height:0;border:1px solid var(--ring);background:#1f2937;color:#e5e7eb;z-index:20}
+.fab:active{transform:scale(0.98)}
+.tabs{display:flex;gap:8px;margin-bottom:12px}
+.tab{flex:1;text-align:center;padding:10px;border:1px solid var(--ring);border-radius:999px;background:#0b1220;cursor:pointer}
+.tab.active{background:#111827}
+.section{border-left:3px solid transparent;padding-left:10px}
+.section.green{border-color:var(--green)}
+.section.blue{border-color:var(--blue)}
+.section.red{border-color:var(--red)}
+.section.yellow{border-color:var(--yellow)}
+.note-card{border:1px dashed var(--ring);border-radius:14px;padding:10px;min-height:72px}
+.item-row{display:flex;align-items:center;gap:12px;border:1px solid var(--ring);border-radius:14px;padding:10px}
+.badge{font-size:11px;border:1px solid var(--ring);padding:2px 6px;border-radius:999px;color:var(--muted)}
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center}
+.modal.hidden{display:none}
+.modal-card{width:min(720px,92vw);max-height:88vh;overflow:auto;background:#0b1220;border:1px solid var(--ring);border-radius:20px}
+.modal-head{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;border-bottom:1px solid var(--ring)}
+.modal-body{padding:16px}
+.modal-actions{display:flex;gap:8px;justify-content:flex-end;padding:12px 16px;border-top:1px solid var(--ring)}
+.icon-choice{font-size:24px;display:grid;grid-template-columns:repeat(8,1fr);gap:8px}
+.icon-choice button{padding:10px;border:1px solid var(--ring);background:#0b1220;border-radius:12px}
+.color-swatch{height:28px;border-radius:999px;border:1px solid var(--ring)}
+.album{display:flex;align-items:center;gap:8px;border:1px dashed var(--ring);border-radius:14px;padding:10px}
+.image-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.image-grid img{width:100%;height:100px;object-fit:cover;border-radius:12px;border:1px solid var(--ring)}
+.viewer{position:fixed;inset:0;background:rgba(0,0,0,.92);display:flex;align-items:center;justify-content:center}
+.viewer img{max-width:96vw;max-height:90vh}
+.viewer.hidden{display:none}
+.toast{position:fixed;left:50%;transform:translateX(-50%);bottom:80px;background:#111827;border:1px solid var(--ring);padding:8px 12px;border-radius:10px;color:#e5e7eb}
+hr{border:0;border-top:1px solid var(--ring);margin:10px 0}
